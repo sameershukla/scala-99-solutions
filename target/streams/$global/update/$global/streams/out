@@ -444,7 +444,7 @@
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-lang#scala-compiler;2.10.6!scala-compiler.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-lang#jline;2.10.6!jline.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.fusesource.jansi#jansi;1.4!jansi.jar[0m
-[0m[[0mdebug[0m] [0m:: resolution report :: resolve 350ms :: artifacts dl 35ms[0m
+[0m[[0mdebug[0m] [0m:: resolution report :: resolve 311ms :: artifacts dl 11ms[0m
 [0m[[0mdebug[0m] [0m	report for default#myscala99_2.10;1.0 compile produced in /home/sameer/mygithub/MyScala99/target/resolution-cache/reports/default-myscala99_2.10-compile.xml[0m
 [0m[[0mdebug[0m] [0m	report for default#myscala99_2.10;1.0 runtime produced in /home/sameer/mygithub/MyScala99/target/resolution-cache/reports/default-myscala99_2.10-runtime.xml[0m
 [0m[[0mdebug[0m] [0m	report for default#myscala99_2.10;1.0 test produced in /home/sameer/mygithub/MyScala99/target/resolution-cache/reports/default-myscala99_2.10-test.xml[0m
@@ -458,5 +458,5 @@
 [0m[[0mdebug[0m] [0m	report for default#myscala99_2.10;1.0 docs produced in /home/sameer/mygithub/MyScala99/target/resolution-cache/reports/default-myscala99_2.10-docs.xml[0m
 [0m[[0mdebug[0m] [0m	report for default#myscala99_2.10;1.0 pom produced in /home/sameer/mygithub/MyScala99/target/resolution-cache/reports/default-myscala99_2.10-pom.xml[0m
 [0m[[0mdebug[0m] [0m	report for default#myscala99_2.10;1.0 scala-tool produced in /home/sameer/mygithub/MyScala99/target/resolution-cache/reports/default-myscala99_2.10-scala-tool.xml[0m
-[0m[[0mdebug[0m] [0m	resolve done (350ms resolve - 35ms download)[0m
+[0m[[0mdebug[0m] [0m	resolve done (311ms resolve - 11ms download)[0m
 [0m[[0minfo[0m] [0mDone updating.[0m

@@ -60,6 +60,10 @@ class TestSolutions99 extends FunSuite with BeforeAndAfter {
     assert(solutions.encode(List("a", "a", "a", "a", "b", "c", "c", "a", "a", "d", "e", "e", "e", "e")) === List((4, "a"), (1, "b"), (2, "c"), (2, "a"), (1, "d"), (4, "e")))
   }
 
+  test("testEncodeModified") {
+    assert(solutions.encodeModified(List("a", "a", "a", "a", "b", "c", "c", "a", "a", "d", "e", "e", "e", "e")) === List((4, "a"), "b", (2, "c"), (2, "a"), "d", (4, "e")))
+  }
+
   test("testDecode") {
     assert(solutions.decode(List((4, "a"), (1, "b"), (2, "c"), (2, "a"), (1, "d"), (4, "e"))) === List("a", "a", "a", "a", "b", "c", "c", "a", "a", "d", "e", "e", "e", "e"))
   }
@@ -84,5 +88,18 @@ class TestSolutions99 extends FunSuite with BeforeAndAfter {
     assert(solutions.slice(3, 7, List("a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k")) === List("d", "e", "f", "g"))
   }
 
+  test("testremoveAt") {
+    assert(solutions.removeAt(1, List("a", "b", "c", "d")) === (List("a", "c", "d"), "b"))
+  }
+
+  test("testInsertAt") {
+    assert(solutions.insertAt("new", 1, List("a", "b", "c", "d")) === List("a", "new", "b", "c", "d"))
+    assert(solutions.insertAt("new", 2, List("a", "b", "c", "d")) === List("a", "b", "new", "c", "d"))
+  }
+
+  test("testRotateN") {
+    assert(solutions.rotateN(3, List("a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k")) === List("d", "e", "f", "g", "h", "i", "j", "k", "a", "b", "c"))
+    assert(solutions.rotateN(-2, List("a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k")) === List("j", "k", "a", "b", "c", "d", "e", "f", "g", "h", "i"))
+  }
 
 }

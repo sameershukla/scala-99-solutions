@@ -19,10 +19,10 @@ class Solutions99 {
   //Ex 05
   def reverse[A](list: List[A]): List[A] = list.foldLeft(List[A]())((x, y) => y :: x)
 
-  //Ex 05
+  //Ex 06
   def palindrome[A](list: List[A]): Boolean = if (list == list.reverse) true else false
 
-  //Ex 06
+  //Ex 07
   def flatten[A](list: List[Any]): List[Any] = {
     //FlatMap is also a PartialFunction so it is equivalent to collect in this case :) and then you can flatten 
     val l = list collect {
@@ -54,6 +54,12 @@ class Solutions99 {
   //Ex 10 * 13
   def encode[A](list: List[A]): List[(Int, A)] = pack(list).map(x => (x.length, x.head))
 
+  //Ex11
+  def encodeModified[A](list: List[A]): List[Any] = pack(list).map(x => x match {
+    case x if (x.length == 1) => x.head
+    case y if (x.length > 1)  => (x.length, x.head)
+  })
+
   //Ex 12
   //TODO: Generified it and implement a trait MyNumeric and then apply
   def decode(ls: List[(Int, String)]): List[String] = {
@@ -81,5 +87,35 @@ class Solutions99 {
   def slice[A](from: Int, to: Int, list: List[A]): List[A] = {
     list.splitAt(from)._2.splitAt(to - from)._1
   }
+
+  //Ex 19
+  def rotateN[A](n: Int, list: List[A]): List[A] = {
+    n match {
+      case x if (x > 0) => {
+        val splittedList = list.splitAt(n)
+        splittedList._2 ++ splittedList._1
+      }
+      case x if (x < 0) => {
+        val splittedList = list.splitAt(list.length - Math.abs(n))
+        splittedList._2 ++ splittedList._1
+      }
+    }
+  }
+
+  //Ex 20.
+  def removeAt[A](n: Int, list: List[A]): (List[A], A) = {
+    val splittedList = list.splitAt(n)
+    (splittedList._1 ++ splittedList._2.tail, splittedList._2.head)
+  }
+
+  //Ex 21
+  def insertAt[A](ob: A, n: Int, list: List[A]): List[A] = {
+    val splittedList = list.splitAt(n)
+    splittedList._1 ++ List(ob) ++ splittedList._2
+  }
+
+  //Ex 22
+  def range(from: Int, to: Int): List[Int] = List.range(from, to + 1)
+
 }
 

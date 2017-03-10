@@ -8,9 +8,13 @@
 [0m[[0minfo[0m] [0m[32m- testCompress[0m[0m
 [0m[[0minfo[0m] [0m[32m- testPack[0m[0m
 [0m[[0minfo[0m] [0m[32m- testEncode[0m[0m
+[0m[[0minfo[0m] [0m[32m- testEncodeModified[0m[0m
 [0m[[0minfo[0m] [0m[32m- testDecode[0m[0m
 [0m[[0minfo[0m] [0m[32m- testDuplicate[0m[0m
 [0m[[0minfo[0m] [0m[32m- testDuplicateN[0m[0m
 [0m[[0minfo[0m] [0m[32m- testDropN[0m[0m
 [0m[[0minfo[0m] [0m[32m- testSplit[0m[0m
 [0m[[0minfo[0m] [0m[32m- testSlice[0m[0m
+[0m[[0minfo[0m] [0m[32m- testremoveAt[0m[0m
+[0m[[0minfo[0m] [0m[32m- testInsertAt[0m[0m
+[0m[[0minfo[0m] [0m[32m- testRotateN[0m[0m
